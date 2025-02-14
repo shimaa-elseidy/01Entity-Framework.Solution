@@ -15,6 +15,9 @@
             // TPH  ==> table per hierachy
             // TPCC ==> table per concert class
             #endregion
+            #region 03 EF Core Vs Dapper Vs ADO.NET
+            // EF Core Vs Dapper Vs ADO.NET
+            #endregion
         }
     }
 }
