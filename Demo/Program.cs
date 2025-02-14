@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Demo.Contexts;
 
 namespace Demo
 {
@@ -40,29 +41,32 @@ namespace Demo
             // 2. Data annotation
             //[Table("Hamada", Schema = "dbo")]
             //public class Employee
-        //{
-        //    [Key] // Pk has  identity constraint
-        //    [DatabaseGenerated(DatabaseGeneratedOption.None)] // Pk has  identity constraint
-        //    public int EmpId { get; set; }
-        //    [Required]
-        //    [Column("EmpName", TypeName = "varchar")]
-        //    [MaxLength(50)]
-        //    [StringLength(50, MinimumLength = 20)]
-        //    public string Name { get; set; }
-        //    [Range(20, 60)]
-        //    public int? Age { get; set; }
-        //    [EmailAddress]
-        //    public string Email { get; set; }
-        //    [DataType(DataType.PhoneNumber)]
-        //    public string PhoneNumber { get; set; }
-        //    [Column(TypeName = "money")]
-        //    [DataType(DataType.Currency)]
-        //    public double Salary { get; set; }
-        //    [NotMapped]
-        //    public int TotalSalary { get; set; }
-        //}
-        #endregion
-    }
+            //{
+            //    [Key] // Pk has  identity constraint
+            //    [DatabaseGenerated(DatabaseGeneratedOption.None)] // Pk has  identity constraint
+            //    public int EmpId { get; set; }
+            //    [Required]
+            //    [Column("EmpName", TypeName = "varchar")]
+            //    [MaxLength(50)]
+            //    [StringLength(50, MinimumLength = 20)]
+            //    public string Name { get; set; }
+            //    [Range(20, 60)]
+            //    public int? Age { get; set; }
+            //    [EmailAddress]
+            //    public string Email { get; set; }
+            //    [DataType(DataType.PhoneNumber)]
+            //    public string PhoneNumber { get; set; }
+            //    [Column(TypeName = "money")]
+            //    [DataType(DataType.Currency)]
+            //    public double Salary { get; set; }
+            //    [NotMapped]
+            //    public int TotalSalary { get; set; }
+            //}
+            #endregion
+            #region 06 DbContext & Installing Required Packages
+            AppDbContext appDb = new AppDbContext();
+            #endregion
+        }
     }
 }
   
