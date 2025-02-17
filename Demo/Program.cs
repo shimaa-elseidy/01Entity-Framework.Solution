@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Demo.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace Demo
 {
@@ -64,7 +65,11 @@ namespace Demo
             //}
             #endregion
             #region 06 DbContext & Installing Required Packages
-            AppDbContext appDb = new AppDbContext();
+            //AppDbContext appDb = new AppDbContext();
+            #endregion
+            #region 07 Our First Migration & Installing Required Packages
+            //AppDbContext appDb = new AppDbContext();
+            //appDb.Database.Migrate();
             #endregion
         }
     }
